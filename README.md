@@ -1,11 +1,6 @@
-Absolutely, Sushmareddy — here’s a full, polished `README.md` for **HyperDB**, tailored to showcase your backend engineering, modular architecture, monitoring, and benchmarking skills. It’s structured for recruiter impact, technical clarity, and portfolio polish.
-
----
-
-## 📘 `README.md`
-
 ```markdown
 # HyperDB – A Modular Relational Database Engine with Monitoring
+```
 
 ![CI](https://github.com/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring/actions/workflows/test.yml/badge.svg)
 ![Coverage](https://img.shields.io/badge/Coverage-89%25-brightgreen)
