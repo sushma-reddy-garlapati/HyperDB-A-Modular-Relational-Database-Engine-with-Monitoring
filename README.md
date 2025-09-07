@@ -1,33 +1,26 @@
-```markdown
-HyperDB – A Modular Relational Database Engine with Monitoring
-```
-HyperDB is a modular, high-performance relational database system built from scratch. It features custom file-based storage, buffer management with LRU eviction, tombstone-based slot reuse, page compaction, and real-time monitoring via Prometheus. Designed for backend engineers and systems enthusiasts, HyperDB emphasizes clarity, observability, and production-grade polish.
 
+```markdown
+# HyperDB – A Modular Relational Database Engine with Monitoring
+```
 ![CI](https://github.com/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring/actions/workflows/test.yml/badge.svg)
 ![Coverage](https://img.shields.io/badge/Coverage-89%25-brightgreen)
 ![License](https://img.shields.io/github/license/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring)
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
-![Last Commit](https://img.shields.io/github/last-commit/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring)
 
+HyperDB is a custom-built, modular relational database engine designed to demonstrate core backend engineering principles with a focus on buffer management, storage, and observability. It features a page-based storage system with an LRU buffer manager, precise offset tracking, and real-time metrics collection using Prometheus.
 
-## ❓ Why HyperDB?
-
-HyperDB is built for engineers who want to understand database internals — not just use them. It’s a hands-on, modular system that teaches buffer management, page-level storage, tombstone reuse, and real-time observability. Whether you're prepping for systems interviews or building scalable data platforms, HyperDB gives you the tools and transparency to learn and deploy with confidence.
-
+The project includes a comprehensive benchmark suite validating insertions, lookups, evictions, and buffer management performance, alongside a Streamlit dashboard for interactive visualization of buffer state and query latency. A robust CI/CD pipeline with GitHub Actions ensures code quality through automated testing and coverage reporting.
 
 ---
 
 ## 🚀 Features
 
-- 🧠 **Buffer Manager** with LRU eviction and page reuse
-- 📦 **Page-Level Storage** with tombstone-based slot reuse
-- 🔍 **Query Engine** with insert, lookup, and range scan support
-- 📊 **Prometheus Monitoring** for page loads and buffer hits
-- 🧪 **Benchmark Suite** for insert, lookup, eviction, and reuse
-- 📈 **Streamlit Dashboard** for real-time buffer visualization
-- 🔁 **Compaction Logic** to reclaim deleted slots
-- ⚙️ **CI/CD Integration** with pytest and coverage enforcement
-- 🧹 **Modular Design** with clean separation of buffer, storage, and monitoring layers
+- 🧠 LRU-based buffer eviction with page pinning logic
+- 📦 Page-level storage with offset tracking and slot management
+- 📊 Prometheus metrics for buffer hits, page loads, and query latency
+- 📈 Streamlit dashboard for real-time buffer visualization
+- 🧪 Benchmark suite for insert, lookup, and eviction performance
+- ✅ CI/CD pipeline with automated testing and coverage enforcement
 
 ---
 
@@ -38,15 +31,14 @@ HyperDB is built for engineers who want to understand database internals — not
 | Insert        | 1000    | 0.0008     | 0.8              |
 | Lookup        | 1000    | 0.0002     | 0.2              |
 | Eviction      | 1000    | 0.0021     | —                |
-| Slot Reuse    | 1000    | 0.0036     | 3.6              |
 
-> HyperDB handles thousands of operations in milliseconds, validating buffer logic, offset tracking, and tombstone reuse.
+> HyperDB executes thousands of operations in milliseconds, validating buffer logic and offset reuse.
 
 ---
 
 ## 📊 Dashboard Preview
 
-> Coming soon: Streamlit dashboard with buffer state, page compaction, and query latency metrics.
+> Coming soon: Streamlit dashboard with buffer state, query latency, and page-level metrics.
 
 ---
 
@@ -58,7 +50,7 @@ HyperDB is built for engineers who want to understand database internals — not
 +------------------+       +------------------+       +------------------+
         ↑                          ↑                          ↑
         |                          |                          |
-  Prometheus Metrics       Tombstone Reuse           Disk-backed Storage
+  Prometheus Metrics       Offset Tracking           Disk-backed Storage
 ```
 
 ---
@@ -89,7 +81,7 @@ pytest --cov=minidb minidb/tests/
 
 ---
 
-## 🧹 Project Structure
+## 📁 Project Structure
 
 ```
 HyperDB/
@@ -108,11 +100,24 @@ HyperDB/
 
 ---
 
+## 🛠️ Skills & Tools Used
+
+| Category         | Tools & Technologies                                      |
+|------------------|-----------------------------------------------------------|
+| **Languages**    | Python                                                    |
+| **Testing**      | `pytest`, `pytest-cov`                                    |
+| **Monitoring**   | `prometheus_client`, Prometheus                          |
+| **Dashboarding** | `streamlit`                                               |
+| **DevOps**       | GitHub Actions, cron jobs, CI/CD setup                    |
+| **Design**       | Modular architecture, clean UI, recruiter-facing README   |
+| **Debugging**    | Root cause analysis, edge case simulation, test coverage  |
+| **Documentation**| Architecture diagrams, benchmark tables, feature breakdown|
+
+---
+
 ## 📜 License
 
 This project is licensed under the MIT License.
-
----
 
 ## 👩‍💻 Built By
 
