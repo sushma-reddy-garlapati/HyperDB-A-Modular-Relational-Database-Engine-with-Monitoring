@@ -8,7 +8,7 @@ from minidb.storage.page import Page
 import requests
 import json
 from collections import Counter
-
+import time
 # ------------------ Setup ------------------
 st.set_page_config(page_title="HyperDB Dashboard", layout="wide", initial_sidebar_state="expanded")
 
@@ -219,9 +219,29 @@ with tab3:
             role_counts = qe.aggregate_by_field(scanned, "role")
             st.write(f"Engineers: {role_counts.get('engineer', 0)}")
 
+# with tab4:
+#     st.subheader("Buffer State")
+#     st.write(list(bm.buffer.keys()))
+
 with tab4:
-    st.subheader("Buffer State")
-    st.write(list(bm.buffer.keys()))
+    st.subheader("📦 Buffer State Overview")
+
+    if bm.buffer:
+        for page_id, page in bm.buffer.items():
+            st.markdown(f"### Page {page_id}")
+            st.write(f"🔹 Total Records: {len(page.records)}")
+            st.write(f"🔹 Deleted Offsets: {page.deleted_offsets}")
+            #st.write(f"🔹 Pinned: {page.pinned}")
+            st.write("🔹 Records:")
+            try:
+                decoded = [r.decode("utf-8") for r in page.records if r]
+                st.write(decoded)
+            except Exception:
+                st.warning("Some records could not be decoded.")
+    else:
+        st.info("Buffer is currently empty.")
+
+
 with tab5:
     st.subheader("System Metrics")
     try:
@@ -244,3 +264,8 @@ with tab5:
 
     except Exception as e:
         st.error(f"Could not fetch metrics: {e}")
+def main():
+    import streamlit.web.cli as stcli
+    import sys
+    sys.argv = ["streamlit", "run", "dashboard.py"]
+    sys.exit(stcli.main())

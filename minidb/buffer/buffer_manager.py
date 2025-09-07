@@ -5,7 +5,6 @@ from minidb.monitoring.metrics import buffer_evictions_total
 import logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
-
 class BufferManager:
 
     def __init__(self, capacity=5, metrics=None):
@@ -15,11 +14,13 @@ class BufferManager:
         self.offset_table = {}
         self.metrics = metrics
 
-
     def get_page(self, page_id):
         if page_id in self.buffer:
+            buffer_hits_total.inc()  # 🔹 Count buffer hit
             self.buffer.move_to_end(page_id)
             return self.buffer[page_id]
+        
+        buffer_misses_total.inc()  # 🔹 Count buffer miss
         page = self.file_manager.load_page(page_id)
         self.insert_page(page)
         return page
@@ -89,6 +90,7 @@ class BufferManager:
         if page:
             return page.read_record(offset)
         return None
+
 
 
 
