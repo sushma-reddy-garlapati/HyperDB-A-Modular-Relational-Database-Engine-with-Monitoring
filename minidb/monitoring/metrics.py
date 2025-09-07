@@ -1,5 +1,10 @@
 from prometheus_client import Counter, Histogram, CollectorRegistry
 
+buffer_hits_total = Counter("buffer_hits_total", "Total buffer hits")
+buffer_misses_total = Counter("buffer_misses_total", "Total buffer misses")
+buffer_evictions_total = Counter("buffer_evictions_total", "Total buffer evictions")
+
+
 # Create a singleton registry
 registry = CollectorRegistry()
 
