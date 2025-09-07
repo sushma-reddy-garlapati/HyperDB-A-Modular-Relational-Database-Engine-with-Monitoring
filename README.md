@@ -15,7 +15,7 @@ A modular relational database engine with buffer management, page-level storage,
 =======
 # HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring
 HyperDB is a modular, high-performance relational database system built from scratch. It includes custom file-based storage, indexing, query processing, FastAPI endpoints, Prometheus monitoring, and optional semantic search. Designed for backend engineering, observability, and scalable data workloads with clean architecture and deployment-ready.
->>>>>>> 761e56125ba67eb58e53a6fded1f5f76e8a3d1a9
+
 ![CI](https://github.com/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring/actions/workflows/test.yml/badge.svg)
 ![Coverage](https://img.shields.io/badge/Coverage-89%25-brightgreen)
 ![License](https://img.shields.io/github/license/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring)
