@@ -1,5 +1,5 @@
 ```markdown
-# HyperDB – A Modular Relational Database Engine with Monitoring
+HyperDB – A Modular Relational Database Engine with Monitoring
 ```
 
 ![CI](https://github.com/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring/actions/workflows/test.yml/badge.svg)
@@ -109,10 +109,4 @@ This project is licensed under the MIT License.
 
 ## 👩‍💻 Built By
 
-**Sushmareddy Garlapati**  
-Backend & NLP Engineer | Systems Architect | Dashboard Designer  
-Modular, recruiter-ready GenAI and database systems with real-world impact.
-
----
-
-```
+**Sushma reddy Garlapati**  
