@@ -2,6 +2,8 @@ from collections import OrderedDict
 from minidb.storage.filemanager import FileManager
 from minidb.storage.page import Page
 from minidb.monitoring.metrics import buffer_evictions_total
+from minidb.monitoring.metrics import buffer_hits_total, buffer_misses_total
+
 import logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
