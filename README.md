@@ -1,12 +1,19 @@
 ```markdown
 HyperDB – A Modular Relational Database Engine with Monitoring
 ```
+HyperDB is a modular, high-performance relational database system built from scratch. It features custom file-based storage, buffer management with LRU eviction, tombstone-based slot reuse, page compaction, and real-time monitoring via Prometheus. Designed for backend engineers and systems enthusiasts, HyperDB emphasizes clarity, observability, and production-grade polish.
 
 ![CI](https://github.com/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring/actions/workflows/test.yml/badge.svg)
 ![Coverage](https://img.shields.io/badge/Coverage-89%25-brightgreen)
 ![License](https://img.shields.io/github/license/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring)
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Last Commit](https://img.shields.io/github/last-commit/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring)
 
-HyperDB is a modular, high-performance relational database system built from scratch. It features custom file-based storage, buffer management with LRU eviction, tombstone-based slot reuse, page compaction, and real-time monitoring via Prometheus. Designed for backend engineers and systems enthusiasts, HyperDB emphasizes clarity, observability, and production-grade polish.
+
+## ❓ Why HyperDB?
+
+HyperDB is built for engineers who want to understand database internals — not just use them. It’s a hands-on, modular system that teaches buffer management, page-level storage, tombstone reuse, and real-time observability. Whether you're prepping for systems interviews or building scalable data platforms, HyperDB gives you the tools and transparency to learn and deploy with confidence.
+
 
 ---
 
