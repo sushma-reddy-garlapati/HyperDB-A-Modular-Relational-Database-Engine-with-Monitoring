@@ -1,0 +1,2 @@
+# HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring
+HyperDB is a modular, high-performance relational database system built from scratch. It includes custom file-based storage, indexing, query processing, FastAPI endpoints, Prometheus monitoring, and optional semantic search. Designed for backend engineering, observability, and scalable data workloads with clean architecture and deployment-ready.
