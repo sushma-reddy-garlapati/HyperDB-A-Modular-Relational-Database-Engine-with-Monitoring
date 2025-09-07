@@ -1,7 +1,6 @@
 
-```markdown
 # HyperDB – A Modular Relational Database Engine with Monitoring
-```
+
 ![CI](https://github.com/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring/actions/workflows/test.yml/badge.svg)
 ![Coverage](https://img.shields.io/badge/Coverage-89%25-brightgreen)
 ![License](https://img.shields.io/github/license/sushma-reddy-garlapati/HyperDB-A-Modular-Relational-Database-Engine-with-Monitoring)
